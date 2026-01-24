@@ -7,4 +7,3 @@
 # Float
 # Boolean
 # None
-
