@@ -23,4 +23,4 @@ print("sweet") if food == "cake" or food == "jalebi" else print("not sweet")
 #   Clever if <var> = (false,true) [<condition>]
 
 salary = 50000
-tax = salary *(0.1,0.2) [salary > 50000]
+tax = salary * (0.1,0.2) [salary > 50000]
