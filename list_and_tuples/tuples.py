@@ -3,7 +3,7 @@
 tuple = (5,)
 
 #   tuple = (1) this will consider integer not tuple
-
+type(tuple)
 tuple = (1,2,3,4,True)
 print(tuple)
 

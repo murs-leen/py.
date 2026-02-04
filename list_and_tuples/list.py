@@ -11,11 +11,13 @@ print(type(marks))
 
 marks.append("new value")
 marks.insert(6,"insertion")
-marks.remove(4) #   take value
-marks.pop(1) #  take index
+marks.remove(4) #   take value to remove
+marks.pop(1) #  take index 
 
 print("updated list:",marks)
 
 #   Slicing in lists
 
 print(marks[1:4])
+
+input().split()
