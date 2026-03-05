@@ -13,20 +13,20 @@ COLORS = ['white', 'black', 'lime', 'red', 'cyan', 'yellow', 'royalblue']
 
 class Pathfinder:
     def __init__(self, grid_size = GRID_SIZE):
-        
+
         self.grid_size = grid_size
         self.grid = np.zeros((grid_size, grid_size))
-        self.start = (2, 2)
+        self.start = (0, 0)
         self.target = (grid_size - 3, grid_size - 3)
         self.walls = set()
         self._setup_walls()
         
         # Visualization setup
-        self.fig, self.ax = plt.subplots(figsize=(8, 8))
+        self.fig, self.ax = plt.subplots(figsize=(8, 8)) 
         self.img = None
         
     def _setup_walls(self):
-        # Create some interesting walls for visualization
+        # Create some walls for visualization
         for i in range(5, 11):
             self.walls.add((i, 7))
         for j in range(3, 8):
@@ -80,7 +80,8 @@ class Pathfinder:
 
         while queue:
             current = queue.popleft()
-            if current == self.target: return self.reconstruct_path(visited)
+            if current == self.target: 
+                return self.reconstruct_path(visited)
             
             explored.add(current)
             for neighbor in self.get_neighbors(current):
